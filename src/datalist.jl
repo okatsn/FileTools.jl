@@ -8,7 +8,7 @@
 # Output:
      O.fullpath is a string vector of the paths of the desired files or folders.
 """
-function datalist(regexppattern::Regex, find_in::String,
+function datalist(regexppattern::Regex, find_in::String;
                   method::String="readdir", find::String="both")
 # CHECKPOINT:
 # for the setting:
@@ -60,7 +60,17 @@ function datalist(regexppattern::Regex, find_in::String,
     # check if the file/folder names match the regular expression pattern, and
     # return a 1-d true false array.
     desired_ind = occursin.(regexppattern,basename.(result_paths));
-    O = (fullpath = sort(result_paths[desired_ind]),);
+
+    flist = result_paths[desired_ind]
+    if findfiles
+        flist = flist[isfile.(flist)]
+    end
+
+    if findfolders
+        flist = flist[isdir.(flist)]
+    end
+
+    O = (fullpath = sort(flist),);
     return O
 end
 
