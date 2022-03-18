@@ -3,7 +3,6 @@ Similar to `filelist`, `filelistall(dir)` returns all files in the directory (**
 """
 function filelistall(dir)
     wd = walkdir(dir)
-    first(wd)
     allpaths = String[]
     for (root, dirs, files) in wd
         for file in files
