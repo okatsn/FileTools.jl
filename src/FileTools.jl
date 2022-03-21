@@ -18,4 +18,8 @@ export gettag
 
 include("folderlist.jl")
 export folderlist, folderlistall
+
+using CSV
+include("skipwrite.jl")
+export skipwrite
 end
