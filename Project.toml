@@ -1,7 +1,10 @@
 name = "FileTools"
 uuid = "2c042965-b292-4a40-a4a9-3abf2d00bee5"
 authors = ["Tsung-Hsi Wu <okatsn@gmail.com>"]
-version = "0.2.0"
+version = "0.2.1"
+
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 
 [compat]
 julia = "1.6.4"
