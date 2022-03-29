@@ -22,4 +22,8 @@ export folderlist, folderlistall
 using CSV
 include("skipwrite.jl")
 export skipwrite
+
+using Printf
+include("pathnorepeat.jl")
+export pathnorepeat
 end
