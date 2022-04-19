@@ -26,4 +26,7 @@ export skipwrite
 using Printf
 include("pathnorepeat.jl")
 export pathnorepeat
+
+include("trymkpath.jl")
+export trymkpath
 end
