@@ -29,4 +29,7 @@ export pathnorepeat
 
 include("trymkpath.jl")
 export trymkpath
+
+include("movefiles.jl")
+export movefiles
 end
