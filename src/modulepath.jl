@@ -1,6 +1,6 @@
 
 """
-`moduledir(m::Module)` returns the base directory for "m = YourModule".
+`moduledir(m::Module)` returns the base directory for `m = YourModule`.
 
 # Example
 ```julia
