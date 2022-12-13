@@ -11,7 +11,7 @@ function targetlist(targetexpr::Regex, dir2walk::AbstractString)
     end
     allfiles = basename.(fulllist);
     targetid = occursin.(targetexpr, allfiles);
-    
+
     targetpaths = fulllist[targetid];
     return targetpaths, allfiles
 end

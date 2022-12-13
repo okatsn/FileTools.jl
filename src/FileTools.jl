@@ -32,4 +32,7 @@ export trymkpath
 
 include("movefiles.jl")
 export movefiles
+
+include("modulepath.jl")
+export moduledir
 end
