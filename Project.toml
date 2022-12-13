@@ -1,14 +1,14 @@
 name = "FileTools"
 uuid = "2c042965-b292-4a40-a4a9-3abf2d00bee5"
 authors = ["Tsung-Hsi Wu <okatsn@gmail.com>"]
-version = "0.5.1"
+version = "0.5.2"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [compat]
-julia = "1.6.4"
+julia = "1.6"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
