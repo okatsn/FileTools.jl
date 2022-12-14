@@ -9,10 +9,13 @@ function folderlistall(dir)
             path_i = joinpath(root, dir_i)
             push!(allpaths, path_i)
         end
-    end    
+    end
     return allpaths
 end
 
+function folderlistall()
+    folderlistall(pwd())
+end
 
 """
 `folderlist(dir; join=true)` return the list of folder but no subfolder under `dir`. This function uses `walkdir`.
@@ -21,7 +24,7 @@ function folderlist(dir; join=true)
     wd = walkdir(dir) # you cannot add topdown=false to walkdir; otherwise, popfirst! won't return the first level of target folders/files.
     allpaths = String[]
     (root, dir, file) = popfirst!(wd)
-    ans = if join 
+    ans = if join
         joinpath.(root, dir)
     else
         dir
@@ -34,7 +37,7 @@ end
 """
 function folderlist(expr::Regex, dir; join=true)
     allfolders = folderlist(dir; join = join)
-    if join 
+    if join
         desired_ind = occursin.(expr, basename.(allfolders))
     else
         desired_ind = occursin.(expr, allfolders)
