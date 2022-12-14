@@ -13,6 +13,9 @@ function folderlistall(dir)
     return allpaths
 end
 
+"""
+`folderlistall()` returns results in the current directory (`pwd`)
+"""
 function folderlistall()
     folderlistall(pwd())
 end
@@ -30,6 +33,13 @@ function folderlist(dir; join=true)
         dir
     end
     return ans
+end
+
+"""
+`folderlist(;kwargs...)` returns results in the current directory (`pwd`)
+"""
+function folderlist(;kwargs...)
+    folderlist(pwd();kwargs...)
 end
 
 """
